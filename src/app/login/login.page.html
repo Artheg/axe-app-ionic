@@ -5,7 +5,11 @@
 </ion-header>
 
 <ion-content>
-  <button>
-    Test
+  <button class="loginBtn loginBtn--facebook">
+    Login with Facebook
+  </button>
+  
+  <button (click)="googleLogin()" class="loginBtn loginBtn--google">
+    Login with Google
   </button>
 </ion-content>

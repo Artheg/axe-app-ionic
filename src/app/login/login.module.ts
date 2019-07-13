@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
 const routes: Routes = [
   {
