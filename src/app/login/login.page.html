@@ -1,15 +1,49 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <button class="loginBtn loginBtn--facebook">
-    Login with Facebook
-  </button>
-  
-  <button (click)="googleLogin()" class="loginBtn loginBtn--google">
-    Login with Google
-  </button>
+  <ion-grid style="height: 100%">
+
+    <ion-row justify-content-center align-items-center style="height:100%">
+      <ion-col>
+        <div class="ion-text-center">
+          <img class="logo" src="./assets/logo.png" />
+          <h3>Champthrow</h3>
+          <ion-text color="black">
+              <h4>Welcome to Champthrow app. Care to link one of your accounts?</h4>
+              <h6>Linking one of your accounts would help us to preserve your game data.</h6>
+            </ion-text>
+          
+        </div>
+      </ion-col>
+
+      
+
+
+      <div class="inner">
+        <ion-row>
+          <ion-avatar width="100px" height="100px">
+            <img src="https://peopletalk.ru/wp-content/uploads/2016/11/1480331127.jpg" />
+          </ion-avatar>
+          <ion-item>
+            <ion-label position="floating">Enter nickname:</ion-label>
+            <ion-input autofocus="true" value="Champion"></ion-input>
+          </ion-item>
+
+        </ion-row>
+
+        <ion-button (click)="googleLogin()" color="danger">
+          <ion-icon name="logo-google"></ion-icon>
+          Link Google
+        </ion-button>
+
+        <ion-button (click)="facebookLogin()" color="primary">
+          <ion-icon name="logo-facebook"></ion-icon>
+          Link Facebook
+        </ion-button>
+      </div>
+
+      <ion-button (click)="fakeLogin()" size="medium" color="dark"
+        class="ion-color ion-color-dark ios button button-large button-solid ion-activatable ion-focusable hydrated activated">
+        Nah, I just want to play</ion-button>
+
+    </ion-row>
+  </ion-grid>
 </ion-content>

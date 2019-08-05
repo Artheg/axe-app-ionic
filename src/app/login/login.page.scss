@@ -64,3 +64,27 @@ body { padding: 2em; }
 .loginBtn--google:focus {
   background: #E74B37;
 }
+
+.loginPageContent {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ion-avatar {
+  width:100% !important;  
+  height : 100% !important; 
+  max-width: 100px !important;
+  max-height: 100px !important;
+}
+
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.logo {
+  max-width: 125px;
+  max-height: 125px;
+}

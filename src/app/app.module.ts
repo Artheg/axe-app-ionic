@@ -12,6 +12,8 @@ import { environment } from 'src/environments/environment';
 
 import { AngularFireModule, FirebaseApp } from 'angularfire2';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { Facebook } from '@ionic-native/facebook/ngx';
 
 export const firebaseConfig = environment;
 
@@ -28,6 +30,8 @@ export const firebaseConfig = environment;
     StatusBar,
     SplashScreen,
     GooglePlus,
+    Facebook,
+    QRScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
