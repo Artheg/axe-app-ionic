@@ -14,11 +14,12 @@ import { AngularFireModule, FirebaseApp } from 'angularfire2';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { Facebook } from '@ionic-native/facebook/ngx';
+import { QROverlay } from './qr-overlay/qr-overlay.component';
 
 export const firebaseConfig = environment;
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, QROverlay],
   entryComponents: [],
   imports: [
     BrowserModule,

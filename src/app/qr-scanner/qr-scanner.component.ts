@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { AppModel } from '../App.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +11,8 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 })
 export class QrScannerComponent implements OnInit {
 
-  constructor(private qrScanner: QRScanner) { }
+  constructor(private qrScanner: QRScanner, private router: Router) {
+   }
 
   ngOnInit() {
     this.qrScanner.prepare()
@@ -18,7 +21,8 @@ export class QrScannerComponent implements OnInit {
         // camera permission was granted
         // start scanning
  
-        this.qrScanner.show()
+        this.qrScanner.show();
+        AppModel.QREnabled.next(true);
         window.document.querySelector('ion-app').classList.add('cameraView');
  
         let scanSub = this.qrScanner.scan().subscribe((text: string) => {

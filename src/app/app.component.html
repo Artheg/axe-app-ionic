@@ -1,4 +1,6 @@
-<ion-app style="background: none transparent;">
+
+<qr-overlay *ngIf="qrVisible === true"></qr-overlay>
+<ion-app *ngIf="qrVisible === false" style="background: none transparent;">
   <ion-split-pane>
     <!-- <ion-menu type="overlay">
       <ion-header>
